@@ -105,7 +105,7 @@ const Hero = () => (
       {/* Redes sociales mejoradas */}
       <div className="flex justify-center gap-6 animate-fade-up mb-8">
         <a
-          href="https://github.com/tuusuario"
+          href="https://github.com/CharlyLizard"
           className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:scale-125 transition-all duration-300 p-2 rounded-full hover:bg-white/50 dark:hover:bg-gray-800/50"
           target="_blank"
           rel="noopener noreferrer"
@@ -113,7 +113,7 @@ const Hero = () => (
           <FaGithub size={28} />
         </a>
         <a
-          href="https://linkedin.com/in/tuusuario"
+          href="https://www.linkedin.com/in/carlos-mart%C3%ADn-salvatierra-275b45166/"
           className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-125 transition-all duration-300 p-2 rounded-full hover:bg-white/50 dark:hover:bg-gray-800/50"
           target="_blank"
           rel="noopener noreferrer"
