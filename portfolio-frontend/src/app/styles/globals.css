@@ -5,16 +5,6 @@
   --foreground: #171717;
 }
 
-/* Elimina @theme inline y usa @layer base */
-@layer base {
-  :root {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -22,8 +12,13 @@
   }
 }
 
+/* Forzar las variables de color en modo oscuro */
+html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
 body {
-  background: var(--background);
   color: var(--foreground);
 }
 
