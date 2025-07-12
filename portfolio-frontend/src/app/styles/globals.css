@@ -1,7 +1,99 @@
-@import "tailwindcss/preflight";
 @import "tailwindcss";
 
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Elimina @theme inline y usa @layer base */
+@layer base {
+  :root {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
 body {
-  background-color: #f9fafb; /* Tailwind bg-gray-50 */
-  color: #111827;            /* Tailwind text-gray-900 */
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Animaciones personalizadas */
+@keyframes fade-in {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes fade-down {
+  from { opacity: 0; transform: translateY(-30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes glow {
+  0%, 100% { 
+    text-shadow: 0 0 20px #a78bfa, 0 0 30px #6366f1, 0 0 40px #8b5cf6; 
+  }
+  50% { 
+    text-shadow: 0 0 30px #f472b6, 0 0 40px #ec4899, 0 0 50px #6366f1; 
+  }
+}
+@keyframes icon-glow {
+  0%, 100% { 
+    filter: drop-shadow(0 0 10px #a5b4fc) drop-shadow(0 0 20px #6366f1); 
+  }
+  50% { 
+    filter: drop-shadow(0 0 20px #f472b6) drop-shadow(0 0 30px #ec4899); 
+  }
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 20ch }
+}
+@keyframes blink {
+  50% { border-color: transparent }
+}
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Clases de animación */
+.animate-fade-in { animation: fade-in 1s ease-out; }
+.animate-fade-down { animation: fade-down 1s ease-out; }
+.animate-fade-up { animation: fade-up 1s ease-out; }
+.animate-glow { animation: glow 2s infinite alternate; }
+.animate-icon-glow { animation: icon-glow 2s infinite alternate; }
+.animate-blob { animation: blob 7s infinite; }
+.animate-spin-slow { animation: spin-slow 3s linear infinite; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+.typing-demo {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #6366f1;
+  width: 0;
+  animation: typing 3s steps(20, end) forwards, blink .75s step-end infinite;
 }
