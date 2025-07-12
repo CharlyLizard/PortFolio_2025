@@ -18,38 +18,43 @@ const Hero = () => (
     
     {/* Contenido principal */}
     <div className="relative z-10 max-w-6xl mx-auto px-4">
-      {/* Avatar con efectos mejorados */}
-      <div className="relative mb-8 group">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 rounded-full animate-spin-slow opacity-75 blur-sm group-hover:opacity-90 transition-opacity"></div>
-        <img
-          src="images/Photo_person.png"
-          alt="Carlos Martín Salvatierra"
-          className="relative w-40 h-40 rounded-full shadow-2xl border-4 border-white dark:border-gray-800 object-cover hover:scale-110 transition-transform duration-500 animate-fade-in"
-          style={{ objectPosition: "center top" }}
-        />
-        <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 dark:bg-green-400 rounded-full border-2 border-white dark:border-gray-800 animate-pulse shadow-lg"></div>
+      
+      {/* Layout horizontal: Avatar + Contenido */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-8">
+        
+        {/* Avatar con efectos mejorados */}
+        <div className="relative group flex-shrink-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 rounded-full animate-spin-slow opacity-75 blur-sm group-hover:opacity-90 transition-opacity"></div>
+          <img
+            src="images/Photo_person.png"
+            alt="Carlos Martín Salvatierra"
+            className="relative w-40 h-40 lg:w-48 lg:h-48 rounded-full shadow-2xl border-4 border-white dark:border-gray-800 object-cover hover:scale-110 transition-transform duration-500 animate-fade-in"
+            style={{ objectPosition: "center top" }}
+          />
+          <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 dark:bg-green-400 rounded-full border-2 border-white dark:border-gray-800 animate-pulse shadow-lg"></div>
+        </div>
+
+        {/* Contenido de texto */}
+        <div className="text-center lg:text-left">
+          {/* Nombre principal con efecto neón */}
+          <h1 className="text-5xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 dark:from-purple-300 dark:via-pink-400 dark:to-red-400 bg-clip-text text-transparent animate-fade-in filter drop-shadow-lg">
+            Carlos Martín Salvatierra
+          </h1>
+
+          {/* Subtítulo con animación de escritura */}
+          <h2 className="text-2xl lg:text-4xl font-semibold text-gray-700 dark:text-white mb-6 animate-slide-up opacity-90">
+            Desarrollador <span className="text-blue-600 dark:text-blue-400">Fullstack</span>
+          </h2>
+
+          {/* Descripción con efectos de texto */}
+          <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl leading-relaxed animate-slide-up animation-delay-500">
+            Construyo aplicaciones web <span className="text-blue-600 dark:text-blue-400 font-semibold">modernas</span>, 
+            <span className="text-green-600 dark:text-green-400 font-semibold"> escalables</span> y 
+            <span className="text-purple-600 dark:text-purple-400 font-semibold"> eficientes</span>. 
+            Apasionado por la innovación y el aprendizaje continuo.
+          </p>
+        </div>
       </div>
-
-      {/* Nombre con efecto mejorado */}
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent drop-shadow-2xl animate-fade-down tracking-tight">
-        <span className="inline-block animate-glow hover:scale-105 transition-transform cursor-default">
-          Carlos Martín Salvatierra
-        </span>
-      </h1>
-
-      {/* Título con efecto typing mejorado */}
-      <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 dark:text-gray-200 mb-6 typing-demo mx-auto">
-        Desarrollador Fullstack
-      </h2>
-
-      {/* Descripción mejorada con mejor espaciado */}
-      <p className="text-base sm:text-lg lg:text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-up">
-        Construyo aplicaciones web{" "}
-        <span className="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors cursor-default">modernas</span>,{" "}
-        <span className="font-bold text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 transition-colors cursor-default">escalables</span> y{" "}
-        <span className="font-bold text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition-colors cursor-default">eficientes</span>.{" "}
-        Apasionado por la innovación y el aprendizaje continuo.
-      </p>
 
       {/* Stack de tecnologías con Grid responsivo */}
       <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 justify-items-center text-4xl lg:text-5xl mb-10 animate-fade-up max-w-2xl mx-auto">
