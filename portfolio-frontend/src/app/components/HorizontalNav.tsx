@@ -33,6 +33,22 @@ export default function HorizontalNav() {
     setCurrentSection(index);
   };
 
+  // Detectar automáticamente la sección activa
+  useEffect(() => {
+    const container = document.getElementById('sections-container');
+    if (!container) return;
+
+    const handleScroll = () => {
+      const scrollLeft = container.scrollLeft;
+      const sectionWidth = window.innerWidth;
+      const newIndex = Math.round(scrollLeft / sectionWidth);
+      setCurrentSection(newIndex);
+    };
+
+    container.addEventListener('scroll', handleScroll);
+    return () => container.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <nav className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-full border border-gray-200 dark:border-gray-700 shadow-2xl px-3 py-2">
       <div className="flex items-center gap-1">
@@ -58,6 +74,8 @@ export default function HorizontalNav() {
           );
         })}
       </div>
+      
+      
     </nav>
   );
 }

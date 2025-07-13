@@ -3,4 +3,6 @@ export interface SpotifySong {
   artist: string;
   albumCover: string;
   spotifyUrl: string;
+  previewUrl?: string;
+  localAudioUrl?: string;  // ← Nueva propiedad
 }

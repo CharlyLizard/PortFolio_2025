@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
-import "../app/styles/globals.css";
 import { ThemeProvider } from 'next-themes';
+import './styles/globals.css';
+import { AudioProvider } from './providers/AudioProvider';
+import MiniSpotifyPlayer from './components/MiniSpotifyPlayer'; // ← Nuevo import
+
 
 export const metadata: Metadata = {
   title: "Carlos Martín Salvatierra - Portfolio",
@@ -23,7 +26,10 @@ export default function RootLayout({
           enableSystem={false}
           storageKey="portfolio-theme"
         >
-          {children}
+          <AudioProvider>
+            {children}
+            <MiniSpotifyPlayer /> {/* ← Reemplaza SpotifyBottomBar */}
+          </AudioProvider>
         </ThemeProvider>
       </body>
     </html>
