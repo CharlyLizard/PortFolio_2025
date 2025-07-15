@@ -4,7 +4,7 @@ import { Experience } from "../models/Experience";
 import { SkillsData } from "../models/SkillsData";
 import { ContactInfo } from "../models/ContactInfo";
 
-const API_BASE_URL = "http://localhost:8001/api";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001/api";
 
 export async function getAboutInfo(): Promise<AboutInfo> {
   try {
@@ -18,14 +18,9 @@ export async function getAboutInfo(): Promise<AboutInfo> {
 }
 
 export async function getProjects(): Promise<Project[]> {
-  try {
-    const res = await fetch(`${API_BASE_URL}/portfolio/projects`);
-    if (!res.ok) throw new Error("No se pudieron obtener los proyectos");
-    return res.json();
-  } catch (error) {
-    console.error("Error obteniendo proyectos:", error);
-    throw error;
-  }
+  const res = await fetch(`${API_BASE_URL}/portfolio/projects`);
+  if (!res.ok) throw new Error("No se pudieron obtener los proyectos");
+  return res.json();
 }
 
 export async function getExperience(): Promise<Experience[]> {

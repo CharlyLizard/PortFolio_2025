@@ -30,23 +30,23 @@ async def get_projects():
         },
         {
             "id": 2,
-            "name": "Sistema de Gestión",
-            "description": "Aplicación fullstack para gestión empresarial",
-            "technologies": ["React", "Node.js", "MongoDB", "Express"],
-            "github": "https://github.com/CharlyLizard/sistema-gestion",
-            "demo": "https://sistema-demo.com",
-            "image": "/images/sistema-preview.png",
-            "featured": False
+            "name": "GameTracker TFG",
+            "description": "Aplicación fullstack para gestión de videojuegos y juegos interactivos",
+            "technologies": ["React", "Node.js", "MongoDB", "Express", "Socket.IO", "Tailwind CSS", "TypeScript","Astro JS"],
+            "github": "https://github.com/CharlyLizard/GameTracker",
+            "demo": "https://gametracker-navy.vercel.app/",
+            "image": "/images/gametracker.png",
+            "featured": True
         },
         {
             "id": 3,
-            "name": "API REST E-commerce",
-            "description": "API robusta para plataforma de comercio electrónico",
-            "technologies": ["Python", "FastAPI", "PostgreSQL", "Redis"],
-            "github": "https://github.com/CharlyLizard/ecommerce-api",
-            "demo": "https://api-docs.com",
+            "name": "Proyecto Citas SStratey",
+            "description": "Aplicación de citas con funcionalidades avanzadas de búsqueda y filtrado",
+            "technologies": ["Angular 19", "SpringBoot", "SQL", "Java 24", "Tailwind CSS"],
+            "github": "https://github.com/CharlyLizard/PROYECTO_RESERVAS_SSTRATEGY",
+            "demo": "https://github.com/CharlyLizard/PROYECTO_RESERVAS_SSTRATEGY",
             "image": "/images/api-preview.png",
-            "featured": True
+            "featured": False
         }
     ]
 
