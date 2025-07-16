@@ -55,29 +55,29 @@ async def get_experience():
     return [
         {
             "id": 1,
-            "company": "Empresa Innovadora S.L.",
-            "role": "Desarrollador Senior Fullstack",
-            "period": "2023 - Presente",
-            "description": "Desarrollo y mantenimiento de aplicaciones web modernas usando React, Node.js y Python.",
-            "technologies": ["React", "Node.js", "Python", "AWS", "Docker"],
-            "location": "Madrid, España"
+            "company": "Megamedia || RealMadridTV",
+            "role": "Tecnico en Sistemas Microinformaticos y Redes",
+            "period": "2020 - 2021",
+            "description": "Mantenimiento de aplicaciones web y soporte técnico a usuarios. Implementación de soluciones tecnológicas para mejorar la eficiencia operativa.",
+            "technologies": ["Ubuntu", "Windows Server", "Active Directory", "Office 365", "VMware"],
+            "location": "Pozuelo de Alarcon, España"
         },
         {
             "id": 2,
-            "company": "StartUp TechFlow",
-            "role": "Desarrollador Fullstack",
-            "period": "2021 - 2023",
-            "description": "Creación de plataformas web escalables y APIs RESTful para productos digitales.",
-            "technologies": ["Vue.js", "Express", "MongoDB", "Firebase"],
-            "location": "Barcelona, España"
+            "company": "SStrategy",
+            "role": "Desarrollador Junior Fullstack en pruebas",
+            "period": "2025 (3 meses)",
+            "description": "Creación de plataformas web escalables y APIs RESTful .",
+            "technologies": ["Angular", "Java SpringBoot", "SQL Server", "Angular Material"],
+            "location": "Remoto"
         },
         {
             "id": 3,
-            "company": "Freelance",
-            "role": "Desarrollador Web",
-            "period": "2020 - 2021",
-            "description": "Desarrollo de sitios web personalizados y aplicaciones web para pequeñas empresas.",
-            "technologies": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+            "company": "SStrategy",
+            "role": "Desarrollador Junior Fullstack ",
+            "period": "2025 (Actualidad)",
+            "description": "Creación de plataformas web escalables y APIs RESTful .",
+            "technologies": ["Angular", "Java SpringBoot", "SQL Server", "Angular Material"],
             "location": "Remoto"
         }
     ]
