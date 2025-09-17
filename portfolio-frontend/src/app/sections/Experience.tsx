@@ -42,7 +42,19 @@ const ExperienceSection = () => {
 
   return (
     <section className="min-h-screen w-full bg-gradient-to-br from-orange-50 via-amber-50 to-red-100 dark:from-gray-900 dark:via-orange-900 dark:to-red-900 py-20 px-4 relative overflow-hidden">
-      {/* Partículas de fondo */}
+      {/* Fondos animados como en Hero y About */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-300 dark:bg-orange-600 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-red-300 dark:bg-red-600 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-40 left-40 w-80 h-80 bg-amber-300 dark:bg-amber-600 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-4000"></div>
+        
+        {/* Partículas flotantes */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-orange-400 dark:bg-orange-300 rounded-full animate-float opacity-60"></div>
+        <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-red-400 dark:bg-red-300 rounded-full animate-float animation-delay-2000 opacity-60"></div>
+        <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-amber-400 dark:bg-amber-300 rounded-full animate-float animation-delay-4000 opacity-60"></div>
+      </div>
+
+      {/* Partículas adicionales */}
       <div className="absolute inset-0">
         {[...Array(25)].map((_, i) => (
           <div
@@ -55,9 +67,6 @@ const ExperienceSection = () => {
             }}
           />
         ))}
-        {/* Líneas decorativas */}
-        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-400/20 to-transparent"></div>
-        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-400/20 to-transparent"></div>
       </div>
 
       {/* Título */}

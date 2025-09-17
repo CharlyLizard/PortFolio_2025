@@ -56,7 +56,19 @@ const Projects = () => {
 
   return (
     <section className="min-h-screen w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-16 px-4 relative overflow-hidden flex flex-col">
-      {/* Partículas de fondo mejoradas */}
+      {/* Fondos animados como en Hero y About */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-400 dark:bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-400 dark:bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-40 left-40 w-80 h-80 bg-indigo-400 dark:bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
+
+        {/* Partículas flotantes */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-float opacity-60"></div>
+        <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-pink-400 rounded-full animate-float animation-delay-2000 opacity-60"></div>
+        <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-indigo-400 rounded-full animate-float animation-delay-4000 opacity-60"></div>
+      </div>
+
+      {/* Partículas de fondo adicionales */}
       <div className="absolute inset-0">
         {[...Array(25)].map((_, i) => (
           <div
@@ -69,9 +81,6 @@ const Projects = () => {
             }}
           />
         ))}
-        {/* Líneas decorativas */}
-        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/20 to-transparent"></div>
-        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-400/20 to-transparent"></div>
       </div>
 
       {/* Título más compacto */}
