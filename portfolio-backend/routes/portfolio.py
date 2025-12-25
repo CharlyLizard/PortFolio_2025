@@ -88,20 +88,23 @@ async def get_skills():
         "frontend": [
             {"name": "React", "level": 90, "icon": "⚛️"},
             {"name": "Next.js", "level": 85, "icon": "▲"},
+            {"name": "Angular", "level": 88, "icon": "🅰️"},
             {"name": "TypeScript", "level": 80, "icon": "📘"},
             {"name": "Tailwind CSS", "level": 95, "icon": "🎨"},
-            {"name": "Vue.js", "level": 75, "icon": "💚"}
+            {"name": "Angular Material", "level": 85, "icon": "🎨"}
         ],
         "backend": [
             {"name": "Python", "level": 90, "icon": "🐍"},
+            {"name": "Java", "level": 80, "icon": "☕"},
+            {"name": "Spring Boot", "level": 78, "icon": "🌱"},
             {"name": "FastAPI", "level": 85, "icon": "⚡"},
             {"name": "Node.js", "level": 80, "icon": "💚"},
-            {"name": "Express", "level": 75, "icon": "🚀"},
-            {"name": "PostgreSQL", "level": 70, "icon": "🐘"}
+            {"name": "MySQL", "level": 75, "icon": "🐬"}
         ],
         "tools": [
             {"name": "Git", "level": 90, "icon": "🔧"},
             {"name": "Docker", "level": 75, "icon": "🐳"},
+            {"name": "Jenkins", "level": 65, "icon": "⚙️"},
             {"name": "AWS", "level": 70, "icon": "☁️"},
             {"name": "VS Code", "level": 95, "icon": "💻"},
             {"name": "Figma", "level": 60, "icon": "🎨"}
